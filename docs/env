@@ -1,0 +1,13 @@
+# Muc dich su dung : Khi trien khai o local,ec2,... co the dong bo
+                    + Khi o local thi dev co the thay the cac key, bien cua ho vao de phat trien
+
+
+# Su dung : require('dotenv').config();
+
+# Cach config
+
+- Moi truong dev
+- Moi truong pro
+- Su dung process.env de lay bien moi truong
+ex : host: process.env.DEV_DB_HOST ||'localhost',
+- get bien o init : db:{host,port,name}

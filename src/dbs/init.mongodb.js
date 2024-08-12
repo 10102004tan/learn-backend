@@ -3,7 +3,7 @@
 
 const mongooes = require('mongoose');
 const { countConnect,countCore,checkOverload } = require('../helpers/check.connect');
-
+const { db:{host,port,name}} = require('../configs/config.mongodb');
 
 class Database {
 
@@ -24,13 +24,13 @@ class Database {
             })
         }
 
-        const connectString = 'mongodb://localhost:27017/learn';
+        const connectString = `mongodb://${host}:${port}/${name}`;
         
         mongooes.connect(connectString).then(() => {
             console.log('connected to database PRO');
             countConnect();
             countCore();
-            checkOverload();
+            // checkOverload();
         })
         .catch((err) => {
             console.log('error connecting to database', err);
