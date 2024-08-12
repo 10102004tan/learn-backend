@@ -1,0 +1,46 @@
+#cach ket noi
+
+- Ở level0 ta sử dụng 1 connect sau đó exprort module ra để sử dụng ở các file khác nhau. Không nên sử dụng cách này vì nó không tối ưu.
+Bởi vì nếu có nhiều file sử dụng connect thì sẽ phải tạo nhiều connect, dẫn đến việc tạo nhiều connect không cần thiết. Nhưng trong express thì nó đã giải quyết vấn đề này rồi. 
+Còn đối với php thì chưa giair quyet duoc dan den viec phai tao nhieu connect khong can thiet.
+=> Giải pháp : sử dụng singleton pattern
+
+- Ở level Pro ta sử dụng singleton pattern để tạo connect.
++ Các bước thực hiện : 
+    + Tạo 1 class Database để tạo connect
+    + Tạo 1 biến static để lưu connect
+    + Tạo 1 hàm static để tạo connect
+    + Sử dụng hàm static để tạo connect
+    + Export module ra để sử dụng ở các file khác nhau
+    + luu y : 
+            - Dung tu khoa this de goi bien instance
+            - Hoac co the dung ten class . ten bien static de goi bien instance
+            - Dung tu khoa static de tao bien static
+
+# cach kiem tra he thong co bao nhieu connect
+
+- Sự khác nhau giữa utils và helpers
+    + utils : - chứa các hàm tiện ích, không liên quan đến business 
+              - ví dụ : hàm chuyển đổi ngày tháng, hàm chuyển đổi chuỗi, hàm tạo mã ngẫu nhiên
+    + helpers : - chứa các hàm hỗ trợ cho business
+                - ví dụ : hàm kiểm tra email, hàm kiểm tra số điện thoại, hàm kiểm tra mật khẩu
+
+- OS va process
+    + OS : - chứa các hàm liên quan đến hệ điều hành
+           - ví dụ : hàm tạo thư mục, hàm xóa thư mục, hàm kiểm tra file tồn tại, lấy length cpus
+    + process : - chứa các hàm liên quan đến process
+                - ví dụ : hàm exit, hàm kill, hàm chạy 1 process
+
+- Su dung ab test req
+                - In windows : ab -n 1000 -c 100 http://localhost:3000/ [Tren wsl : wsl --install]
+                + get ip windows: cat /etc/resolv.conf | grep nameserver
+
+
+
+# phat hien he thong bi qua tai connect
+
+# co nen disconnect lien tuc như ordacel khong ?
+
+# Poolsize la gi ?
+
+# Neu poolsize = 100 thi co nghia la co the co 100 connect cung luc

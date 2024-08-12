@@ -1,0 +1,14 @@
+#Chế độ thường:
+function getProfile (name,  name,  age)
+{
+    //code
+}
+//chạy bình thường.
+
+# ChChe do nghiem ngat:
+
+function getProfile (name,  name,  age)
+{
+    //code
+}
+//báo lỗi vì trùng tên biến name.

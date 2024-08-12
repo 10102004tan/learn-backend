@@ -1,0 +1,5 @@
+morgan('tiny');
+morgan('combined');
+morgan('short'); //=> development [request time]
+morgan('common'); //=> production [not show curl request]
+app.use(morgan('combined')); //=> production

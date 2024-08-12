@@ -1,0 +1,4 @@
+Moi lan nguoi dung request den server thi rat ton bang thong va server cua chung ta
+=> co 2 cach : 
+            + Tai nodejs [xu dung express]
+            + Tai apache [xu dung mod_deflate]
